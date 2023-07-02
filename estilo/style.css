@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+
+h1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 63px;
+    
+    color: greenyellow;
+}
+
