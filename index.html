@@ -21,6 +21,22 @@
             margin: 0px;
             padding: 0px;
         }
+
+        @media (min-width: 768px) {
+            #alis {
+                display: none;
+            }
+
+            #mili {
+                display: none;
+
+               
+            }
+        }
+
+
+
+
         @media (max-width: 600px) {
             body {
                 background-image: url(imagem/celular.jpg);
@@ -38,6 +54,24 @@
                 
                 
             }
+            #titulo1 {
+                display: none;
+            }
+            
+            #mili {
+                top: 42%;
+                left: 48%;
+            }
+
+            #botao1 {
+                top: 55%;
+                
+            }
+
+            #botao2 {
+                top: 65%;
+                left: 36%;
+            }
         }
         @font-face {
             font-family: militar;
@@ -46,6 +80,10 @@
     </style>
 </head>
 <body>
-    <h1>Alistamento Militar</h1>
+    <h1 id="titulo1">Alistamento Militar</h1>
+    <button id="botao1">QUERO ME ALISTAR</button>
+    <button id="botao2">JÁ ME ALISTEI</button>
+    <h1 id="alis">Alistamento</h1>
+    <h1 id="mili">Militar</h1>
 </body>
 </html>
