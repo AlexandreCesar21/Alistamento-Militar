@@ -122,7 +122,7 @@ main {
 .titulocaixa3 {
     font-size: 2em;
     text-align: center;
-    margin-top: 45px;
+    margin-top: 25px;
 }
 
 .paragrafo3 {
@@ -134,6 +134,10 @@ main {
 
 #no {
     color:black
+}
+
+#no:hover {
+    background-color: #e7e7e700;
 }
 
 footer {
