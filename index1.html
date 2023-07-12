@@ -4,25 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Militar</title>
+    <link rel="stylesheet" href="Estilo2/Style.css">
 </head>
+<style>
+    @font-face {
+    font-family: militar;
+    src: url(Military\ Poster.ttf)
+}
+</style>
 <body>
     <header>
-        <h1>Alistamento</h1>
-        <div>
+        <h1 id="titulo">Alistamento Militar</h1>
+        <div id="links">
             <a href="#">Serviços</a>
-            <a href="#">Ajuda</a>
+            <a href="#">Perguntas frequentes</a>
         </div>
     </header>
-    <h1>Você se encontra em alguma dessas situações?</h1>
-    <div>
-        <h1>Moro fora do Brasil</h1>
-    </div>
-    <div>
-        <h1>Apresento problemas de saúde</h1>
-    </div>
-    <div>
-        <h1>Quero me alistar</h1>
-    </div>
+    <main>
+        <br>
+        <h1 id="titulo2">Você se encontra em alguma dessas situações?</h1>
+        <div id="duascaixas">
+            
+            <div id="caixa1">
+               <a href="#" id="no"><div class="titulocaixa1">Exterior</div></a>
+                <br>
+                <div class="paragrafo1">Eu moro em outro pais!</div>
+            </div>
+            <div id="caixa2">
+                <a href="#" id="no"><div class="titulocaixa1">Problemas de saúde</div></a>
+                <br>
+                <div class="paragrafo2">Eu tenho deficiencia!</div>
+            </div>
+        </div>
+        <a href="#" id="no">
+            <div id="caixa3">
+                <div class="titulocaixa3">Alistamento militar</div>
+                <br>
+                <div class="paragrafo3">Quero me alistar para o exército!</div>
+            </div>
+        </a>
+    </main>
     <footer>
         <p>Site criado em 2023</p>
         <p>Criador Alexandre César</p>

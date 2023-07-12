@@ -1,0 +1,141 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+header{
+    background-color: black;
+    
+}
+#titulo {
+    font-family: militar;
+    color: white;
+    font-weight: normal;
+    margin-left: 25px;
+    font-size: 3em;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2px 6px;
+    color: white;
+    transition-duration: 0.5s;
+    border-radius: 5px;
+    margin: 25px;
+    
+}
+
+a:hover {
+    background-color: rgba(250, 250, 250, 0.351);
+}
+
+#links {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    display: flex;
+    list-style-type: none;
+    margin-right: 100px;
+    padding: -25px;
+    width: -25px;
+    
+}
+
+
+
+main {
+    background-color: white;
+    padding: 10px;
+}
+
+#titulo2 {
+    text-align: center;
+    font-size: 3em;
+    padding: 30px;
+}
+
+#caixa1 {
+    border-radius: 10px;
+    background-color: #D1E7DD;
+    width: 300px;
+    height: 150px;
+    margin: 100px;
+    padding: 10px;
+}
+
+.titulocaixa1 {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.paragrafo1 {
+    margin-top: auto;
+    padding-left: 70px;
+    margin-top: 35px;
+    font-size: 1em;
+}
+
+#caixa2 {
+    border-radius: 10px;
+    background-color: #CFE2FF;
+    width: 300px;
+    height: 150px;
+    margin: 100px;
+    padding: 15px;
+    margin-left: auto;
+}
+
+.paragrafo2 {
+    margin-top: auto;
+    padding-left: 70px;
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+
+#duascaixas {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+#caixa3 {
+    border-radius: 10px;
+    background-color: #31ff035d;
+    width: 310px;
+    height: 150px;
+    margin: 100px;
+    padding: 15px;
+    margin: auto;
+    margin-left: 295px;
+}
+
+.titulocaixa3 {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 45px;
+}
+
+.paragrafo3 {
+    margin-top: auto;
+    padding-left: 40px;
+    margin-top: 39px;
+    font-size: 1em;
+}
+
+#no {
+    color:black
+}
+
+footer {
+    background-color: aqua;
+    padding: 5px;
+}
