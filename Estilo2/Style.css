@@ -72,6 +72,26 @@ main {
     padding: 10px;
 }
 
+#caixa1:hover {
+    background-color: aqua;
+    transition: 1s;
+}
+
+#caixa2:hover {
+    background-color: red;
+    transition: 1s;
+}
+
+
+#caixa3:hover {
+    background-color: rgba(0, 0, 0, 0.383);
+    transition: 1s;
+}
+
+#caixa3:hover::after {
+    background-color: red;
+}
+
 .titulocaixa1 {
     font-size: 2em;
     text-align: center;
