@@ -2,7 +2,6 @@ body {
     margin: 0px;
     padding: 0px;
     background-image: url("imagem/Camuflagem.jpg");
-    
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -10,6 +9,8 @@ h1 {
     font-family: Militar;
     text-align: center;
     font-weight: normal;
+    text-shadow: 2px 1px 1px black;
+    color: white;
 }
 
 #imag1 {
@@ -19,13 +20,18 @@ h1 {
 }
 
 main {
-    background-color: aqua;
+    background-color: #596522;
     min-width: 300px;
     max-width: 400px;
     height: auto;
     margin: auto;
-
     padding: 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
+
+label {
+    color: white;
+}
+

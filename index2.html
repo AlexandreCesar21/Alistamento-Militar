@@ -18,10 +18,98 @@
 
     <main>
         <h1>Alistamento Militar</h1>
-        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio tempora mollitia eveniet soluta. Ipsa rerum debitis, at repellat tempora unde necessitatibus ex consectetur vero culpa adipisci nesciunt explicabo quia incidunt.</h2>
-        <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, mollitia quae quam sequi architecto odit vel corrupti voluptas minima vero, expedita asperiores tempora enim. Aut culpa corrupti dolorum voluptatum veniam.
-        </p>
+        <form action="" >
+            <p>
+                <label for="inome">Nome:</label> 
+                <input type="text" name="nome" id="inome" required placeholder="Digite seu nome!">
+                
+            </p>
+            <p>
+                <label for="isobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome" id="isobrenome" required placeholder="Digite seu sobrenome!">
+            </p>
+            <p>
+                <label for="idata">Data de nascimento:</label>
+                <input type="date" name="data" id="idata" >
+            </p>
+            <p>
+                <label for="icpf">CPF:</label>
+                <input type="number" name="cpf" id="icpf" required placeholder="111.111.111-11" maxlength="14">
+            </p>
+            <p>
+                <label for="icep">CEP:</label>
+                <input type="number" name="cep" id="icep" required placeholder="111.111-11" maxlength="10">
+            </p>
+            <p>
+                <label for="iestado">Estado:</label>
+                <select id="estado" name="estado">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                  </select>
+            </p>
+            <p>
+                <label for="icidade">Cidade:</label>
+                <input type="text" name="cidade" id="icidade" placeholder="Digite sua cidade!">
+            </p>
+            <p>
+                <label for="igmail">E-mail:</label>
+                <input type="email" name="gmail" id="iemail" placeholder="name@gmail.com">
+            </p>
+            <p>
+                <label for="iprofissão">Profissão:</label>
+                <select name="profissão" id="profissão">
+                    <option value="Desempregado">Desempregado</option>
+                    <option value="Medicina e Saúde">Medicina e Saúde</option>
+                    <option value="Engenharia e Tecnologia">Engenharia e Tecnologia</option>
+                    <option value="Educação">Educação</option>
+                    <option value="Direito e Justiça">Direito e Justiça</option>
+                    <option value="Administração e Negócios">Administração e Negócios</option>
+                    <option value="Artes e Cultura">Artes e Cultura</option>
+                    <option value="Comunicação e Mídia">Comunicação e Mídia</option>
+                    <option value="Ciências e Pesquisa">Ciências e Pesquisa</option>
+                    <option value="Comércio e Vendas">Comércio e Vendas</option>
+                    <option value="Serviços e Turismo">Serviços e Turismo</option>
+                </select>
+            </p>
+            <p>
+                <label for="Ensino">Ensino:</label>
+                <label for="completo">Completo</label>
+                <input type="checkbox" name="completo" id="completo">
+                <label for="incompleto">Incompleto</label><input type="checkbox" name="incompleto" id="incompleto">
+            </p>
+            <p>
+                <button>Alistar</button>
+                <button type="reset">Limpar</button>     
+            </p>
+        </form>
     </main>
+    <script>
+        console.log("ta pegando")
+    </script>
 </body>
 </html>
