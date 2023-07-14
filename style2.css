@@ -33,5 +33,29 @@ main {
 
 label {
     color: white;
+    font-weight: bolder;
 }
 
+input {
+    border-radius: 5px;
+    border: solid 1px black;
+    background-color: white;
+}
+
+select {
+    border-radius: 10px;
+}
+
+#foto {
+    background-color: white;
+}
+ 
+#botão {
+    text-align: center;
+}
+
+button {
+    border-radius: 10px;
+}
+
+   

@@ -20,28 +20,28 @@
         <h1>Alistamento Militar</h1>
         <form action="" >
             <p>
-                <label for="inome">Nome:</label> 
-                <input type="text" name="nome" id="inome" required placeholder="Digite seu nome!">
+                <label for="nome">Nome:</label> 
+                <input type="text" name="nome" id="nome" required placeholder="Digite seu nome!">
                 
             </p>
             <p>
-                <label for="isobrenome">Sobrenome:</label>
-                <input type="text" name="sobrenome" id="isobrenome" required placeholder="Digite seu sobrenome!">
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome" id="sobrenome" required placeholder="Digite seu sobrenome!">
             </p>
             <p>
-                <label for="idata">Data de nascimento:</label>
-                <input type="date" name="data" id="idata" >
+                <label for="data">Data de nascimento:</label>
+                <input type="date" name="data" id="data" >
             </p>
             <p>
-                <label for="icpf">CPF:</label>
-                <input type="number" name="cpf" id="icpf" required placeholder="111.111.111-11" maxlength="14">
+                <label for="cpf">CPF:</label>
+                <input type="number" name="cpf" id="cpf" required placeholder="111.111.111-11" maxlength="14">
             </p>
             <p>
-                <label for="icep">CEP:</label>
-                <input type="number" name="cep" id="icep" required placeholder="111.111-11" maxlength="10">
+                <label for="cep">CEP:</label>
+                <input type="number" name="cep" id="cep" required placeholder="111.111-11" maxlength="10">
             </p>
             <p>
-                <label for="iestado">Estado:</label>
+                <label for="estado">Estado:</label>
                 <select id="estado" name="estado">
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
@@ -73,15 +73,15 @@
                   </select>
             </p>
             <p>
-                <label for="icidade">Cidade:</label>
-                <input type="text" name="cidade" id="icidade" placeholder="Digite sua cidade!">
+                <label for="cidade">Cidade:</label>
+                <input type="text" name="cidade" id="cidade" placeholder="Digite sua cidade!">
             </p>
             <p>
-                <label for="igmail">E-mail:</label>
-                <input type="email" name="gmail" id="iemail" placeholder="name@gmail.com">
+                <label for="gmail">E-mail:</label>
+                <input type="email" name="gmail" id="email" placeholder="name@gmail.com">
             </p>
             <p>
-                <label for="iprofissão">Profissão:</label>
+                <label for="profissão">Profissão:</label>
                 <select name="profissão" id="profissão">
                     <option value="Desempregado">Desempregado</option>
                     <option value="Medicina e Saúde">Medicina e Saúde</option>
@@ -97,12 +97,16 @@
                 </select>
             </p>
             <p>
+                <label for="foto">Adicione sua foto:</label>
+                <input type="file" name="foto" id="foto">
+            </p>
+            <p>
                 <label for="Ensino">Ensino:</label>
                 <label for="completo">Completo</label>
                 <input type="checkbox" name="completo" id="completo">
                 <label for="incompleto">Incompleto</label><input type="checkbox" name="incompleto" id="incompleto">
             </p>
-            <p>
+            <p id="botão">
                 <button>Alistar</button>
                 <button type="reset">Limpar</button>     
             </p>
