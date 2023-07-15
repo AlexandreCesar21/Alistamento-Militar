@@ -52,11 +52,11 @@
             </p>
             <p>
                 <label for="cpf">CPF:</label>
-                <input type="number" name="cpf" id="cpf" required placeholder="111.111.111-11" maxlength="14">
+                <input type="text" name="cpf" id="cpf" required placeholder="111.111.111-11" maxlength="14" oninput="formatarCPF()">
             </p>
             <p>
                 <label for="cep">CEP:</label>
-                <input type="number" name="cep" id="cep" required placeholder="111.111-11" maxlength="10">
+                <input type="text" name="cep" id="cep" required placeholder="111.111-11" maxlength="10" oninput="formatarCEP()">
             </p>
             <p>
                 <label for="estado">Estado:</label>
@@ -121,8 +121,9 @@
             <p>
                 <label for="Ensino">Ensino:</label>
                 <label for="completo">Completo</label>
-                <input type="checkbox" name="completo" id="completo">
-                <label for="incompleto">Incompleto</label><input type="checkbox" name="incompleto" id="incompleto">
+                <input type="checkbox" name="completo" id="completo" onchange="toggleCheckbox('completo')">
+                <label for="incompleto">Incompleto</label>
+                <input type="checkbox" name="incompleto" id="incompleto" onchange="toggleCheckbox('incompleto')">
             </p>
             
             <p id="botão">
@@ -132,7 +133,49 @@
         </form>
     </main>
     <script>
-        console.log("ta pegando")
+        
+        function formatarCPF() {
+            let cpfInput = document.getElementById("cpf");
+            let cpf = cpfInput.value;
+
+            // Remove caracteres não numéricos
+            cpf = cpf.replace(/\D/g, "");
+
+            // Aplica a formatação do CPF (###.###.###-##)
+            cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+            cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+            cpf = cpf.replace(/(\d{3})(\d{2})$/, "$1-$2");
+
+            cpfInput.value = cpf;
+        }
+
+        function formatarCEP() {
+            let cepInput = document.getElementById("cep")
+            let cep = cepInput.value
+
+            cep = cep.replace(/\D/g, "")
+
+            cep = cep.replace(/(\d{3})(\d)/, "$1.$2")
+            cep = cep.replace(/(\d{3})(\d{2})$/, "$1-$2")
+
+            cepInput.value = cep
+        }
+
+        function toggleCheckbox(checkboxId) {
+            const checkbox = document.getElementById(checkboxId);
+
+            // Desmarca o checkbox oposto caso o atual seja marcado
+            if (checkbox.checked) {
+                if (checkboxId === "completo") {
+                document.getElementById("incompleto").checked = false;
+            } else {
+            document.getElementById("completo").checked = false;
+        }
+    }
+  }
+
+
+
     </script>
 </body>
 </html>
