@@ -17,9 +17,32 @@
     <h1>Alistamento Militar</h1>  
     
     <section>
-        <div id="res">
+        <div id="dados">
             
         </div>
     </section>
 </body>
+<script>
+     // Recupere os dados do formulário armazenados no sessionStorage
+     var formData = JSON.parse(sessionStorage.getItem('formData'));
+
+        // Exiba os dados na div
+        var dadosDiv = document.getElementById('dados').value
+        dadosDiv.innerHTML = 'Nome: ' + formData.nome + '<br>' +
+                            'Sobrenome: ' + formData.sobrenome + '<br>' +
+                            'Data de nascimento: ' + formData.data + '<br>' +
+                            'CPF: ' + formData.cpf + '<br>' +
+                            'CEP: ' + formData.cep + '<br>' +
+                            'Estado: ' + formData.estado + '<br>' +
+                            'Cidade: ' + formData.cidade + '<br>' +
+                            'E-mail: ' + formData.email + '<br>' +
+                            'Profissão: ' + formData.profissao + '<br>' +
+                            'Foto: ' + formData.foto + '<br>' +
+                            'Ensino Completo: ' + formData.completo + '<br>' +
+                            'Ensino Incompleto: ' + formData.incompleto + '<br>';
+        // Adicione mais campos conforme necessário
+
+        // Limpe os dados armazenados no sessionStorage
+        sessionStorage.removeItem('formData');
+</script>
 </html>

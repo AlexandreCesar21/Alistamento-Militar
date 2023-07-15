@@ -39,12 +39,12 @@
         <form action="index3.html" method="post" >
             <p>
                 <label for="nome">Nome:</label> 
-                <input type="text" name="nome" id="nome" required placeholder="Digite seu nome!">
+                <input type="text" name="nome" id="nome" required placeholder="Digite seu nome!" maxlength="45">
                 
             </p>
             <p>
                 <label for="sobrenome">Sobrenome:</label>
-                <input type="text" name="sobrenome" id="sobrenome" required placeholder="Digite seu sobrenome!">
+                <input type="text" name="sobrenome" id="sobrenome" required placeholder="Digite seu sobrenome!" maxlength="45">
             </p>
             <p>
                 <label for="data">Data de nascimento:</label>
@@ -95,8 +95,8 @@
                 <input type="text" name="cidade" id="cidade" placeholder="Digite sua cidade!">
             </p>
             <p>
-                <label for="gmail">E-mail:</label>
-                <input type="email" name="gmail" id="email" placeholder="name@gmail.com">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="name@gmail.com">
             </p>
             <p>
                 <label for="profissão">Profissão:</label>
@@ -119,7 +119,7 @@
                 <input type="file" name="foto" id="foto">
             </p>
             <p>
-                <label for="Ensino">Ensino:</label>
+                <label for="ensino">Ensino:</label>
                 <label for="completo">Completo</label>
                 <input type="checkbox" name="completo" id="completo" onchange="toggleCheckbox('completo')">
                 <label for="incompleto">Incompleto</label>
@@ -127,7 +127,7 @@
             </p>
             
             <p id="botão">
-                <button type="submit">Alistar</button>
+                <button type="submit" id="enviar">Alistar</button>
                 <button type="reset">Limpar</button>     
             </p>
         </form>
@@ -174,8 +174,45 @@
     }
   }
 
+  document.getElementById('formulario').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário
 
+            // Obtenha os valores dos campos do formulário
+            var nome = document.getElementById('nome').value;
+            var sobrenome = document.getElementById('sobrenome').value;
+            var data = document.getElementById('data').value;
+            var cpf = document.getElementById('cpf').value;
+            var cep = document.getElementById('cep').value;
+            var estado = document.getElementById('estado').value;
+            var cidade = document.getElementById('cidade').value;
+            var email = document.getElementById('email').value;
+            var profissao = document.getElementById('profissão').value;
+            var foto = document.getElementById('foto').value;
+            var completo = document.getElementById('completo').checked;
+            var incompleto = document.getElementById('incompleto').checked;
 
+            // Crie um objeto com os dados do formulário
+            var formData = {
+                nome: nome,
+                sobrenome: sobrenome,
+                data: data,
+                cpf: cpf,
+                cep: cep,
+                estado: estado,
+                cidade: cidade,
+                email: email,
+                profissao: profissao,
+                foto: foto,
+                completo: completo,
+                incompleto: incompleto
+            };
+
+            // Armazene os dados do formulário no sessionStorage
+            sessionStorage.setItem('formData', JSON.stringify(formData));
+
+            // Redirecione para a página de destino
+            window.location.href = 'index3.html';
+        });
     </script>
 </body>
 </html>
