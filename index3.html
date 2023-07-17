@@ -3,12 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alistamento Militar</title>
+    <link rel="shortcut icon" href="exercito.ico.png" type="image/x-icon">
     <link rel="stylesheet" href="style4.css">
     <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
          @font-face {
             font-family: militar;
             src: url(Military\ Poster.ttf)
+        }
+
+        h1 {
+            text-shadow: 2px 3px 4px black;
+        }
+        .fonte {
+            
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 3px 4px black;
+            font-size: 4em;
+        }
+
+        .alistado {
+            background-color: rgba(240, 248, 255, 0.221);
         }
     </style>
 </head>
@@ -21,6 +40,7 @@
             
         </div>
     </section>
+        <h1 class="fonte">Alistado!</h1>
 </body>
 <script>
      // Obtém os parâmetros de consulta da URL atual
@@ -44,16 +64,25 @@
         const dadosDiv = document.getElementById('dados');
         dadosDiv.innerHTML = `
             <p>Nome: ${nome}</p>
+            <br>
             <p>Sobrenome: ${sobrenome}</p>
+            <br>
             <p>Data de Nascimento: ${dataNascimento}</p>
+            <br>
             <p>CPF: ${cpf}</p>
+            <br>
             <p>CEP: ${cep}</p>
+            <br>
             <p>Estado: ${estado}</p>
+            <br>
             <p>Cidade: ${cidade}</p>
+            <br>
             <p>Email: ${email}</p>
+            <br>
             <p>Profissão: ${profissao}</p>
+            <br>
             <p>Foto: ${foto}</p>
-            <p>Ensino: ${ensinoCompleto ? 'Completo' : 'Incompleto'}</p>`;
-            
+            <br>
+            <p>Ensino: ${ensinoCompleto ? 'Completo' : 'Incompleto'}</p>`
 </script>
 </html>
