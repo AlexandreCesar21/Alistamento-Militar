@@ -23,26 +23,37 @@
     </section>
 </body>
 <script>
-     // Recupere os dados do formulário armazenados no sessionStorage
-     var formData = JSON.parse(sessionStorage.getItem('formData'));
-
-        // Exiba os dados na div
-        var dadosDiv = document.getElementById('dados').value
-        dadosDiv.innerHTML = 'Nome: ' + formData.nome + '<br>' +
-                            'Sobrenome: ' + formData.sobrenome + '<br>' +
-                            'Data de nascimento: ' + formData.data + '<br>' +
-                            'CPF: ' + formData.cpf + '<br>' +
-                            'CEP: ' + formData.cep + '<br>' +
-                            'Estado: ' + formData.estado + '<br>' +
-                            'Cidade: ' + formData.cidade + '<br>' +
-                            'E-mail: ' + formData.email + '<br>' +
-                            'Profissão: ' + formData.profissao + '<br>' +
-                            'Foto: ' + formData.foto + '<br>' +
-                            'Ensino Completo: ' + formData.completo + '<br>' +
-                            'Ensino Incompleto: ' + formData.incompleto + '<br>';
-        // Adicione mais campos conforme necessário
-
-        // Limpe os dados armazenados no sessionStorage
-        sessionStorage.removeItem('formData');
+     // Obtém os parâmetros de consulta da URL atual
+     const params = new URLSearchParams(window.location.search);
+        
+        // Obtém os valores dos parâmetros
+        const nome = params.get('nome');
+        const sobrenome = params.get('sobrenome');
+        const dataNascimento = params.get('data');
+        const cpf = params.get('cpf');
+        const cep = params.get('cep');
+        const estado = params.get('estado');
+        const cidade = params.get('cidade');
+        const email = params.get('email');
+        const profissao = params.get('profissao');
+        const foto = params.get('foto');
+        const ensinoCompleto = params.get('completo');
+        const ensinoIncompleto = params.get('incompleto');
+        
+        // Exibe os valores na div "dados"
+        const dadosDiv = document.getElementById('dados');
+        dadosDiv.innerHTML = `
+            <p>Nome: ${nome}</p>
+            <p>Sobrenome: ${sobrenome}</p>
+            <p>Data de Nascimento: ${dataNascimento}</p>
+            <p>CPF: ${cpf}</p>
+            <p>CEP: ${cep}</p>
+            <p>Estado: ${estado}</p>
+            <p>Cidade: ${cidade}</p>
+            <p>Email: ${email}</p>
+            <p>Profissão: ${profissao}</p>
+            <p>Foto: ${foto}</p>
+            <p>Ensino: ${ensinoCompleto ? 'Completo' : 'Incompleto'}</p>`;
+            
 </script>
 </html>

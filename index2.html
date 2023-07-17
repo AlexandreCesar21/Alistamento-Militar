@@ -126,8 +126,8 @@
                 <input type="checkbox" name="incompleto" id="incompleto" onchange="toggleCheckbox('incompleto')">
             </p>
             
-            <p id="botão">
-                <button type="submit" id="enviar">Alistar</button>
+            <p>
+                <button type="submit">Alistar</button>
                 <button type="reset">Limpar</button>     
             </p>
         </form>
@@ -173,46 +173,6 @@
         }
     }
   }
-
-  document.getElementById('formulario').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede o envio do formulário
-
-            // Obtenha os valores dos campos do formulário
-            var nome = document.getElementById('nome').value;
-            var sobrenome = document.getElementById('sobrenome').value;
-            var data = document.getElementById('data').value;
-            var cpf = document.getElementById('cpf').value;
-            var cep = document.getElementById('cep').value;
-            var estado = document.getElementById('estado').value;
-            var cidade = document.getElementById('cidade').value;
-            var email = document.getElementById('email').value;
-            var profissao = document.getElementById('profissão').value;
-            var foto = document.getElementById('foto').value;
-            var completo = document.getElementById('completo').checked;
-            var incompleto = document.getElementById('incompleto').checked;
-
-            // Crie um objeto com os dados do formulário
-            var formData = {
-                nome: nome,
-                sobrenome: sobrenome,
-                data: data,
-                cpf: cpf,
-                cep: cep,
-                estado: estado,
-                cidade: cidade,
-                email: email,
-                profissao: profissao,
-                foto: foto,
-                completo: completo,
-                incompleto: incompleto
-            };
-
-            // Armazene os dados do formulário no sessionStorage
-            sessionStorage.setItem('formData', JSON.stringify(formData));
-
-            // Redirecione para a página de destino
-            window.location.href = 'index3.html';
-        });
     </script>
 </body>
 </html>
