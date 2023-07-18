@@ -29,12 +29,43 @@
         section {
             width: 70%;
         }
+
+        .Alistamento {
+            display: none;
+        }
+        .Militar {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                display: none;
+            }
+
+            .Alistamento {
+                display: block;
+                text-align: center;
+            }
+
+            .Militar {
+                display: block;
+                text-align: center;
+            }
+
+            .fonte {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
     
     <h1>Alistamento Militar</h1>  
-    
+
+    <h1 class="Alistamento">Alistamento</h1>
+    <h1 class="Militar">Militar</h1>
+
+
     <section>
         <div id="dados">
             
